@@ -150,13 +150,14 @@
       <script>draw_cloud_by_state()</script>
 
 
-      <!-- <script src="https://d3js.org/d3.v4.min.js"></script>-->
       <hr class="featurette-divider">
 
       <div class="row featurette">
         <div class="col-md-7">
           <h2 class="featurette-heading">Name distribution by states <span class="text-muted"></span></h2>
-          <p>Enter a name and click the "Search" button to see the distribution of the popularity of the given name.</p>
+          <p>
+            This is a visualization for one specific name's distribution via time in different state.
+          General speacking, you can search for any state that you want, and see what's happening during years. Just some hint for name searching though, you can search Jackson, Jerry and Jordan to see different popularity of name in different time. Also, you can search for some famous people, sometimes there will be a peak for baby name because of that. </p>
           <input type="text" id="myText" value="">
           <button onclick="pickname()">Search</button>
           <p id="demo"></p>
@@ -183,8 +184,7 @@
         <!-- add by yipeng -->
         <div class="col-md-5" style="display:block">
           Name: <input type="text" id="nameText" value="Mary">
-          </br>
-          </br>State:
+          State:
           <select id="id_of_select">
                 <!-- <option></option> -->
                 <option value='0'>AK</option>
@@ -250,7 +250,7 @@
         <div class="col-md-7">
           <h2 class="featurette-heading">Male/Female Name count<span class="text-muted"></br>Same state, time series</span></h2>
           <p class="lead">
-            </br>This visualization shows the male and female distribution on baby name. Some Name shows interesting pattern.</p>
+            </br>This visualization shows the male and female distribution on baby names. Some Names show interesting patterns. The left side is for female and the right side is for male. You can use tooltips when you moveover each bar by mouse. One notice, only name numbers greater than five would appear in this visualization. </p>
         </div>
         <div class="col-md-5">
           <svg width="960" height="700" id="v5">

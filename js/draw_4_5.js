@@ -18,6 +18,7 @@ function loadData() {
 
     // yipeng begin
         state_code = "";
+        show_selected()
         document.getElementById('id_of_select').addEventListener('change', show_selected);
         document.getElementById('name_button').addEventListener('click', show_selected);
     //yipeng end
@@ -26,6 +27,8 @@ function loadData() {
 
 function show_selected() {
     //yipeng begin
+    state_code = 'AK'
+    name = 'Mary'
     state_code = state_name[d3.select("#id_of_select").node().value];
     name = document.getElementById("nameText").value;
     console.log(state_code, name)
@@ -104,7 +107,7 @@ function line_chart(state_code, name){
     var svg = d3.select("#v4")
     .attr("width", o_width)
     .attr("height", o_height),
-    margin = {top: 20, right: 20, bottom: 110, left: 40},
+    margin = {top: 50, right: 20, bottom: 110, left: 40},
     margin2 = {top: 430, right: 20, bottom: 30, left: 40},
     width = +svg.attr("width") - margin.left - margin.right,
     height = +svg.attr("height") - margin.top - margin.bottom,
@@ -206,7 +209,7 @@ function line_chart(state_code, name){
         .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
         .call(zoom);
 
-    svg.append("text").attr("x",width/2.5).attr("y", 15).attr("class","title").attr("style", "font-size : 20").text("State: " + state_code + ", Name: " + name);
+    svg.append("text").attr("x",width/2.5).attr("y", 30).attr("class","title").attr("style", "font-size : 20").text("State: " + state_code + ", Name: " + name);
 
     function brushed() {
     if (d3.event.sourceEvent && d3.event.sourceEvent.type === "zoom") return; // ignore brush-by-zoom
