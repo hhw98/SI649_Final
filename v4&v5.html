@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="https://getbootstrap.com/favicon.ico">
+  <title>baby names</title>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/style_cyp.css" />
+  <script type="text/javascript" src="js/draw_4_5.js"></script>
+
+</head>
+
+<body class='body_c'>
+
+  <header>
+    <ul class="sidenav">
+      <li><a href="v1&v2.html">NameNationalwide</a></li>
+      <li><a href="v3.html">NamebyState</a></li>
+      <li><a class="active" href="v4&v5.html">NamebyYear</a></li>
+      <li><a href="v6.html">ForFun</a></li>
+    </ul>
+    <h1>Hello, baby names!</h1>
+    <div class="introduction">
+      <p>For our project we will analyze a dataset of baby names with popularity over time and state in the US. We will create five different interactive visualizations that allow users to explore the name dataset from many different ways across many types of data.
+        You can have an overview of one state. You can also click on nava button to explore more for name distribution by states or different years. Finally, we also found some interesting connection between name popularity and special events happened in a specific year,
+        for example, the huge popularity drop with name 'Halley' and the Halley Comet in 1911 and name patterns during elections. No one visualization should be so complex that the average person couldn’t comprehend it; rather, our project should help users explore name data in many different ways to answer a variety of questions.</p>
+    </div>
+</header>
+<main class="content">
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+      <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider">
+
+        <div class="introduction">
+          <h2 class="featurette-heading">Name number in Same State <span class="text-muted">with time series</span></h2>
+          <p class="lead">
+            </br>Type in a name, and then click to select State. You will see the name count in that state with time series. We only collect count larger than 5, so that there will no data in range [1,4]. </p>
+        </div>
+
+        <div class="introduction">
+        <div style="display:block">
+          Name: <input type="text" id="nameText" value="Mary">
+          State:
+          <select id="id_of_select">
+                <!-- <option></option> -->
+                <option value='0'>AK</option>
+                <option value='1'>AL</option>
+                <option value='2'>AR</option>
+                <option value='3'>AZ</option>
+                <option value='4'>CA</option>
+                <option value='5'>CO</option>
+                <option value='6'>CT</option>
+                <option value='7'>DC</option>
+                <option value='8'>DE</option>
+                <option value='9'>FL</option>
+                <option value='10'>GA</option>
+                <option value='11'>HI</option>
+                <option value='12'>IA</option>
+                <option value='13'>ID</option>
+                <option value='14'>IL</option>
+                <option value='15'>IN</option>
+                <option value='16'>KS</option>
+                <option value='17'>KY</option>
+                <option value='18'>LS</option>
+                <option value='19'>MA</option>
+                <option value='20'>MD</option>
+                <option value='21'>ME</option>
+                <option value='22'>MI</option>
+                <option value='23'>MN</option>
+                <option value='24'>MO</option>
+                <option value='25'>MS</option>
+                <option value='26'>MT</option>
+                <option value='27'>NC</option>
+                <option value='28'>ND</option>
+                <option value='29'>NE</option>
+                <option value='30'>NH</option>
+                <option value='31'>NJ</option>
+                <option value='32'>NM</option>
+                <option value='33'>NV</option>
+                <option value='34'>NY</option>
+                <option value='35'>OH</option>
+                <option value='36'>OK</option>
+                <option value='37'>OR</option>
+                <option value='38'>PA</option>
+                <option value='39'>RI</option>
+                <option value='40'>SC</option>
+                <option value='41'>SD</option>
+                <option value='42'>TN</option>
+                <option value='43'>TX</option>
+                <option value='44'>UT</option>
+                <option value='45'>VA</option>
+                <option value='46'>VT</option>
+                <option value='47'>WA</option>
+                <option value='48'>WI</option>
+                <option value='49'>WV</option>
+                <option value='50'>WY</option>
+                </select>
+          <button id="name_button" style="margin-left: 30px">Try</button>
+          <svg width="960px" height="500px" id="v4"></svg>>
+        </div>
+        </div>
+
+
+      <!-- add by yipeng -->
+      <hr class="featurette-divider">
+          <h2>Male/Female Name count<span class="text-muted"></br>Same state, time series</span></h2>
+      <div class="introduction">
+          <p>
+            </br>This visualization shows the male and female distribution on baby names. Some Names show interesting patterns. The left side is for female and the right side is for male. You can use tooltips when you moveover each bar by mouse. One notice, only name numbers greater than five would appear in this visualization. </p>
+        </div>
+        <div class="introduction">
+          <svg width="960" height="700" id="v5">
+      </div>
+        <hr class="featurette-divider">
+    </main>
+
+
+    <script>
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("myBtn").style.display = "block";
+        } else {
+            document.getElementById("myBtn").style.display = "none";
+        }
+    }
+
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+    </script>
+
+
+
+
+  </body>
+</html>

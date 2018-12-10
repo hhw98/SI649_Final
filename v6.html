@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="https://getbootstrap.com/favicon.ico">
+  <title>baby names</title>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script type="text/javascript" src="js/draw_luke.js"></script>
+</head>
+
+<body class='body_c'>
+
+  <header>
+    <ul class="sidenav">
+      <li><a href="v1&v2.html">NameNationalwide</a></li>
+      <li><a href="v3.html">NamebyState</a></li>
+      <li><a href="v4&v5.html">NamebyYear</a></li>
+      <li><a class="active" href="v6.html">ForFun</a></li>
+    </ul>
+    <h1>Hello, baby names!</h1>
+    <div class="introduction">
+      <p>For our project we will analyze a dataset of baby names with popularity over time and state in the US. We will create five different interactive visualizations that allow users to explore the name dataset from many different ways across many types of data.
+        You can have an overview of one state. You can also click on nava button to explore more for name distribution by states or different years. Finally, we also found some interesting connection between name popularity and special events happened in a specific year,
+        for example, the huge popularity drop with name 'Halley' and the Halley Comet in 1911 and name patterns during elections. No one visualization should be so complex that the average person couldn’t comprehend it; rather, our project should help users explore name data in many different ways to answer a variety of questions.</p>
+    </div>
+</header>
+<main class="content">
+
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+      <!-- START THE FEATURETTES -->
+
+            <hr class="featurette-divider">
+
+
+            <h2>Big events with names by year <span class="text-muted"></span></h2>
+            <div class="introduction">
+                <p>Example:<br>
+                  <li>search '1911', the name 'Halley' droped the most rapidly and did you recall the Halley Comet in 1911?</li></p>
+                  <input type="text" id="searchbar_6" placeholder="Search" aria-label="Search">
+                  <button type="button" onclick="load_perc()">Search</button>
+              <div>
+                <svg width="500px" height="500px" id="v6">
+            <hr class="featurette-divider">
+    </main>
+
+
+    <script>
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("myBtn").style.display = "block";
+        } else {
+            document.getElementById("myBtn").style.display = "none";
+        }
+    }
+
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+    </script>
+
+
+
+
+  </body>
+</html>
