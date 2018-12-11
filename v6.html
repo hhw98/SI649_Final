@@ -47,9 +47,8 @@
 <!--               <p>Default range slider:</p>
               <input type="range" min="1881" max="2017" value="2000"> -->
 
-              <p>Custom range slider:</p>
-              <input type="range" min="1881" max="2017" value="2000" class="slider" id="myRange">
-              <p id="show_range">2000</p>
+              <input type="range" min="1881" max="2017" value="2000" class="slider" id="myRange" onchange="load_perc(this.value)">
+              
             </div>
             </div>            
 
@@ -60,12 +59,17 @@
 
             <div class="introduction">
                 <p>Example:<br>
-                  <li>search '1911', the name 'Halley' droped the most rapidly and did you recall the Halley Comet in 1911?</li></p>
-                  <input type="text" id="searchbar_6" placeholder="Search" aria-label="Search">
-                  <button type="button" onclick="load_perc()">Search</button>
+                  <li>Check out how much the name 'Halley' increased during Halley's Comet in 1910!</li>
+                  <li>Watch the rise of president names during election years in the beginning of the 1900s (1912, 1920, 1924, 1932, 1945). </li>
+                  <li>Halley's Comet returned in 1986. What happens the year after?</li>
+                  <li>What's going on in 1992?</li>
+                  <li>'Miley' blows up in 2007 and crashes in 2014.</li>
+                  <li>In 2017, 'Hillary' dropped significantly, presumably because of the election.</li></p>
+
               <div>
-                <svg width="500px" height="500px" id="v6">
-            <hr class="featurette-divider">
+
+                <svg width="470px" height="470px" id="v6" style="background-color:#d3d3d3">
+            
     </main>
 
 
