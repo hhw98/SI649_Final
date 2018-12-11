@@ -33,6 +33,8 @@
 </header>
 <main class="content">
 
+
+
   <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
       <!-- START THE FEATURETTES -->
 
@@ -40,6 +42,22 @@
 
 
             <h2>Big events with names by year <span class="text-muted"></span></h2>
+            <div class="introduction">
+            <div class="slidecontainer">
+<!--               <p>Default range slider:</p>
+              <input type="range" min="1881" max="2017" value="2000"> -->
+
+              <p>Custom range slider:</p>
+              <input type="range" min="1881" max="2017" value="2000" class="slider" id="myRange">
+              <p id="show_range">2000</p>
+            </div>
+            </div>            
+
+
+
+
+
+
             <div class="introduction">
                 <p>Example:<br>
                   <li>search '1911', the name 'Halley' droped the most rapidly and did you recall the Halley Comet in 1911?</li></p>
@@ -52,7 +70,17 @@
 
 
     <script>
-    window.onscroll = function() {scrollFunction()};
+    window.onscroll = function() {
+      scrollFunction();
+    };
+
+    window.onload = function(){
+      $("#myRange").change(function(){
+        value = $("#myRange").val()
+        $("#show_range").text(value);
+      })
+
+    }
 
     function scrollFunction() {
         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
@@ -67,8 +95,6 @@
         document.documentElement.scrollTop = 0;
     }
     </script>
-
-
 
 
   </body>
