@@ -58,8 +58,10 @@
         function click(d){
             svg = d3.select("#v2");
             svg.selectAll("*").remove();    
-            console.log(d.id)
+            svg = d3.select("#bar");
+            svg.selectAll("*").remove();   
             drawcloud(d.id)
+            drawbar(d.id)
         }
 
         d3.select(id).selectAll(".state")

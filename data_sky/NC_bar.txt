@@ -1,0 +1,16 @@
+name,num
+James,209539
+William,158212
+Mary,133959
+John,124051
+Robert,115750
+Michael,94458
+David,90615
+Charles,81137
+Christopher,62151
+Thomas,58845
+Joseph,55842
+Elizabeth,48399
+Richard,45910
+Betty,44120
+Linda,43987

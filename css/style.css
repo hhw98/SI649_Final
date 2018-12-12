@@ -11,6 +11,10 @@ h1,h2{
       text-align: center;
     }
 
+    #map {
+      text-align: center;
+    }	
+	
     /* From Mengdan's style */
 
     .state:hover{

@@ -1,0 +1,16 @@
+name,num
+Michael,143303
+James,140380
+John,115734
+Robert,114329
+David,103354
+William,102882
+Christopher,90459
+Joseph,67486
+Daniel,66625
+Mary,66503
+Charles,61121
+Matthew,61002
+Joshua,58584
+Richard,57952
+Anthony,56540

@@ -1,0 +1,16 @@
+name,num
+Robert,104831
+James,97401
+John,96683
+Michael,95966
+Mary,84020
+David,82813
+William,63946
+Richard,63732
+Thomas,61958
+Daniel,51202
+Joseph,46282
+Donald,42598
+Mark,40393
+Steven,37906
+Patricia,37394

@@ -55,27 +55,33 @@
 
 
       <div class="introduction">
-        <p>This visualization shows fancy name cloud and top name name bar chart in each state when you click on it.Blue is for male and red is for Female. The bigger font size in name cloud stands for a high popularity for name. The bar chart shows top five most popular names in each state.</p>      
+        <p>This visualization shows fancy name cloud and top name name bar chart in each state when you click on it.Blue is for male and red is for Female. The bigger font size in name cloud stands for a high popularity for name. The bar chart shows top fifth most popular names in each state.</p>
       </div>
       <hr class="featurette-divider">
 
       <!-- Added by sky -->
       <div class="introduction">
           <h2>Name Cloud By State<span class="text-muted" id="show_state"></span></h2>
-          <p>Click on state to get Name Cloud</p>
+          <p>Click on state to get Name Cloud and top fifteen most popular names in that state</p>
         </div>
 
-      <div>
+      <div id="map">
           <svg width="1000px" height="600px" id="v1">
             </svg>
-            <svg width="500px" height="500px" id="v2">
-              </svg>
+      </div>
+      <div>
+          <svg width="500px" height="500px" id="v2"></svg>
+          <svg width="1000px" height="600px" id="bar"></svg>
       </div>
       <!-- Added by sky -->
       <script src="js/drawcloud.js"></script>
       <script>drawcloud("MI") </script>
       <script src="js/statemap.js"></script>
       <script>draw_cloud_by_state()</script>
+      <!-- New -->
+      <script src="js/drawbar.js"></script>
+      <script>drawbar("MI")</script>
+
   </div>
 
     </main>
